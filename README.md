@@ -1,5 +1,3 @@
-# react-guide
-
 # 27 Febrero:
 
   > SI HAY ALGUNA DUDA, FAVOR DE ABRIR UN ISSUE EN ESTE REPOSITORIO CON LA PREGUNTA
@@ -16,38 +14,38 @@ React utiliza el DOM (Document Object Model) para manipular y actualizar la inte
 
 La carpeta "node_modules" es el directorio donde se almacenan las bibliotecas y dependencias de un proyecto Node.js que se instalan a través de herramientas como npm (Node Package Manager) o yarn. Estas herramientas descargan las bibliotecas desde repositorios remotos y las colocan en la carpeta "node_modules" para que el proyecto pueda acceder a ellas. Es importante tener esta carpeta en el archivo ".gitignore" para evitar subirla al repositorio, ya que generalmente es bastante grande y puede generarse de nuevo fácilmente con las dependencias especificadas en el archivo "package.json".
 
+Tanto npm (Node Package Manager) como Yarn son gestores de paquetes para JavaScript que permiten instalar, compartir y gestionar las dependencias de un proyecto. Ambos se utilizan comúnmente en proyectos de Next.js y otros proyectos basados en JavaScript o Node.js.
+
 ### porque son remotas las librerias?:
  Porque estan alojadas en repositorios externos y pueden ser llamados usando npm(node package modules) o yarn.
-
-Tanto npm (Node Package Manager) como Yarn son gestores de paquetes para JavaScript que permiten instalar, compartir y gestionar las dependencias de un proyecto. Ambos se utilizan comúnmente en proyectos de Next.js y otros proyectos basados en JavaScript o Node.js.
 
 # TODO 27 de Febrero:
 
 > Instalar nvm (node version manager)
-bash
+```bash
     $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-
+```
 
 > Comprobar la instalacion
-bash
+```bash
 $ nvm --version
-
+```
 
 > Visualizar que versiones tenemos instaladas localmente
 
-bash
+```bash
 $ nvm ls
-
+```
 >Instalar la version
 
-bash
+```bash
 $ nvm install 18.17.0
-
+```
 
 > Usar la version
-bash
+```bash
 $ nvm use 18.17.0
-
+```
 
 # Probar requests:
 
@@ -60,53 +58,51 @@ $ nvm use 18.17.0
 ### GET REQUEST:
 
 > bash:
-bash
+```bash
 curl https://jsonplaceholder.typicode.com/posts/1
+```
 
-
->powershell:
-powershell
+> powershell:
+```powershell
 Invoke-WebRequest -Uri "https://jsonplaceholder.typicode.com/posts/1"
-
+```
 
 ### POST Request:
 
 > bash:
-bash
+```bash
 curl -X POST -H "Content-Type: application/json" -d '{"title":"foo","body":"bar","userId":1}' https://jsonplaceholder.typicode.com/posts
-
->powershell
-powershell
+```
+> powershell
+```powershell
 Invoke-WebRequest -Uri "https://jsonplaceholder.typicode.com/posts" -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"title":"foo","body":"bar","userId":1}'
-
+```
 
 ### PUT Request:
 > bash:
-bash
+```bash
 curl -X PUT -H "Content-Type: application/json" -d '{"id":1,"title":"foo","body":"bar","userId":1}' https://jsonplaceholder.typicode.com/posts/1
-
+```
 > powershell:
-powershell
+```powershell
 Invoke-WebRequest -Uri "https://jsonplaceholder.typicode.com/posts/1" -Method PUT -Headers @{"Content-Type"="application/json"} -Body '{"id":1,"title":"foo","body":"bar","userId":1}'
-
+```
 
 ### DELETE REQUEST:
 
 > bash:
-bash
+```bash
 curl -X DELETE https://jsonplaceholder.typicode.com/posts/1
-
+```
 
 > powershell:
-powershell
+```powershell
 Invoke-WebRequest -Uri "https://jsonplaceholder.typicode.com/posts/1" -Method DELETE
-
+```
 
 ## Async-Await
 ### Leer ↓
 [Async y Await](https://www.aluracursos.com/blog/asyncawait-en-javascript-que-es-y-cuando-usar-programacion-asincrona)
-
-
 
 ## Server Side y Client side
 ### Leer ↓
